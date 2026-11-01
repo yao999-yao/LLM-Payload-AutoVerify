@@ -1,0 +1,4 @@
+# 运行环境：Python 3.9+
+# 唯一的第三方依赖，用于 HTTP 会话、Cookie 管理与重试
+requests>=2.31.0
+urllib3>=2.0.0

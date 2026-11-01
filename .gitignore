@@ -1,0 +1,26 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 编辑器与系统 ----
+.idea/
+.vscode/
+.settings/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 运行产物 ----
+# result/ 下的 CSV 与日志属于项目产出，需要提交；这里只忽略临时文件
+result/*.tmp
+result/*.bak
+result/cases_snapshot.jsonl
+
+# ---- 本地凭据 ----
+# 若你把 Cookie / API Key 抽到独立文件，请确认不要提交
+config_local.py
+*.secret
