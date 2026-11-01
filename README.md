@@ -422,7 +422,7 @@ python main.py --gen dataset --security high
 
 ## 8. 证书联动说明（核心）
 
-> 本项目是 Web 安全学习过程中的自研工具，用来研究各类漏洞 Payload 的绕过思路与有效性验证。漏洞基础原理学习依托【TryHackMe / 合天网安实验室】的【Web Fundamentals、XSS、SQL Injection】学习路径，我已经完成该路径并取得平台官方电子结业证书，证书 PDF、官方核验链接附在本仓库中。
+> 本项目是 Web 安全学习过程中的自研工具，用来研究各类漏洞 Payload 的绕过思路与有效性验证。漏洞基础原理学习依托 TryHackMe 的 Web Fundamentals 学习路径（含 XSS、SQL Injection 专题）；**该路径目前仍在进行中，尚未取得平台官方电子结业证书**，证书取得后会将 PDF 与官方核验链接补充至本仓库。
 >
 > 证书用来佐证我掌握 Web 漏洞基础原理；本 LLM 自动化验证框架，用来体现我大模型应用、安全自动化、数据收集分析的工程实践能力。二者互为补充，不是替代关系。
 
@@ -437,12 +437,13 @@ python main.py --gen dataset --security high
 
 | 项目 | 内容 |
 | --- | --- |
-| 平台 | 【待填：TryHackMe / 合天网安实验室】 |
-| 学习路径 | 【待填：Web Fundamentals、XSS、SQL Injection】 |
-| 完成日期 | 【待填：YYYY-MM-DD】 |
-| 证书编号 | 【待填】 |
-| 官方核验链接 | 【待填：平台提供的可公开访问的验证地址】 |
-| 仓库内证书文件 | `assets/cert/thm_cert.pdf` |
+| 平台 | TryHackMe |
+| 学习路径 | Web Fundamentals（含 XSS、SQL Injection 专题） |
+| 当前进度 | 【待填：已完成 X / Y 个房间】 |
+| 完成日期 | 【取得证书后填写】 |
+| 证书编号 | 【取得证书后填写】 |
+| 官方核验链接 | 【取得证书后填写】 |
+| 仓库内证书文件 | `assets/cert/thm_cert.pdf`（取得后放入） |
 
 > 提交前请确认：证书确已取得、编号与核验链接真实可访问、表述与实际进度一致。若尚在备考或进行中，请把"已完成"改为"进行中"，避免复试材料出现不实陈述。
 
