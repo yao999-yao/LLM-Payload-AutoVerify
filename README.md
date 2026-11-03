@@ -75,6 +75,7 @@ LLM-Payload-AutoVerify/
     ├── pitch.md                  # 简历 / 复试可直接使用的项目简介
     └── cve/
         ├── CVE-2017-5638.md      # Struts2 S2-045 远程代码执行复现报告
+        ├── CVE-2021-41773.md     # Apache 2.4.49 路径穿越复现报告
         └── evidence/             # 复现证据截图
 ```
 
@@ -430,6 +431,7 @@ DVWA 的漏洞是教学设计的，练的是"批量验证方法论"；真实 CVE
 | 编号 | 组件 | 类型 | 结果 | 报告 |
 | --- | --- | --- | --- | --- |
 | CVE-2017-5638 | Apache Struts2 2.3.31 | 远程代码执行（OGNL 注入） | 未授权执行 `id`，回显 `uid=0(root)` | [CVE-2017-5638.md](docs/cve/CVE-2017-5638.md) |
+| CVE-2021-41773 | Apache HTTP Server 2.4.49 | 路径穿越 | 用 `.%2e` 跳出根目录读取 `/etc/passwd` | [CVE-2021-41773.md](docs/cve/CVE-2021-41773.md) |
 
 复现环境统一由 vulhub + Docker 搭建，全部在本机回环地址运行，复现过程与证据截图一并存档在 `docs/cve/`。
 
